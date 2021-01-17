@@ -23,8 +23,8 @@ class Form extends Component {
     onFormSubmit = (event) => {
         event.preventDefault();
         
-        this.props.handleSubmit(this.state);
-        this.setState(this.initialState);
+        this.props.handleSubmit(this.state); //submits new data
+        this.setState(this.initialState); // resets form
     }
 
     render() {
@@ -46,7 +46,7 @@ class Form extends Component {
                     id="job"
                     value={job} 
                     onChange={this.handleChange} />
-                <button type="submit">
+                <button type="submit" onClick={this.submitForm}>
                     Submit
                 </button>
             </form>
