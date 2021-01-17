@@ -1,25 +1,11 @@
 import React, {Component} from 'react'
 import Table from './Table'
+import Form from './Form'
 
 class App extends Component {
     state = { // stores data and allows updates
         characters: [
-            {
-                name: 'Charlie',
-                job: 'Janitor',
-            },
-            {
-                name: 'Mac',
-                job: 'Bouncer',
-            },
-            {
-                name: 'Dee',
-                job: 'Aspring actress',
-            },
-            {
-                name: 'Dennis',
-                job: 'Bartender',
-            }
+           
         ],
     }
 
@@ -33,6 +19,7 @@ class App extends Component {
         })
       }
 
+    
       render() {
         const { characters } = this.state
 
@@ -42,6 +29,7 @@ class App extends Component {
           <Table 
             characterData={characters} 
             removeCharacter={this.removeCharacter}/>
+            <Form />
         </div>
       )
     }
