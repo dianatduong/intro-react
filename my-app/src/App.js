@@ -23,7 +23,7 @@ class App extends Component {
         ],
     }
 
-    deleteCharacter = (index) => {
+    removeCharacter = (index) => {
         const {characters} = this.state
       
         this.setState({ //updates characters 
@@ -39,7 +39,9 @@ class App extends Component {
 
       return (
         <div className="container">
-          <Table characterData={characters} deleteCharacter={this.deleteCharacter}/>
+          <Table 
+            characterData={characters} 
+            removeCharacter={this.removeCharacter}/>
         </div>
       )
     }
